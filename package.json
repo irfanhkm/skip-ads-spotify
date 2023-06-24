@@ -1,0 +1,17 @@
+{
+  "name": "skip-ads-spotify",
+  "version": "1.0.0",
+  "description": "skip ads spotify by turn down the volume. respect singer, author, spotify developer :).",
+  "main": "index.js",
+  "repository": "git@github.com:irfanhkm/skip-ads-spotify.git",
+  "author": "Irfan Hakim <hakimirfan90@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "25.0.1"
+  }
+}
