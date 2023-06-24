@@ -8,10 +8,17 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "dependencies": {},
   "devDependencies": {
-    "electron": "25.0.1"
+    "electron": "25.0.1",
+    "electron-builder": "^24.4.0"
+  },
+  "build": {
+    "appId": "com.electron.spotify-ads-skipper",
+    "productName": "Spotify Ads Skipper"
   }
 }
