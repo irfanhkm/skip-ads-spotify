@@ -18,7 +18,10 @@
     "electron-builder": "^24.4.0"
   },
   "build": {
-    "appId": "com.electron.spotify-ads-skipper",
-    "productName": "Spotify Ads Skipper"
+    "appId": "com.irfanhkm.spotifyAdsSkipper",
+    "productName": "Spotify Ads Skipper",
+    "directories":{
+        "output":"release"
+    }
   }
 }
