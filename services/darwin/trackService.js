@@ -1,5 +1,6 @@
 const { executeCommand, Script } = require('./osascript');
 const { exec } = require('child_process');
+const { showNotification } = require('../notification');
 
 
 let currentMedia = {};
@@ -18,7 +19,7 @@ async function fetchMetadata() {
     if (!playerRunning) {
         if (isPlayerRunning !== playerRunning) {
             currentMedia = {};
-            console.log('no music player is running');
+            showNotification('', 'Spotify is not running', true);
         }
 
         isPlayerRunning = false;
@@ -45,17 +46,16 @@ async function fetchMetadata() {
         currentMedia = { title, artist, album };
 
         if (title === advertisementTag) {
-            console.log(`Now is advertisement, we keep volume down`);
+            showNotification('Advertisement', 'we keep volume down', true);
             await executeCommand(`${Script.UpdateVolume} ${zeroVolume}`);
             isCurrStateAds = true;
             return;
         } else if (isCurrStateAds) {
-            console.log(`Advertisement complete, we set the default volume`);
             await executeCommand(`${Script.UpdateVolume} ${defaultVolumeAfterAds}`);
             isCurrStateAds = false;
         }
 
-        console.log(`Current song is ${title} by ${artist} on album ${album}`);
+        showNotification("Playing",`${title} by ${artist} from album ${album}`, true);
     }
 }
 

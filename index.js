@@ -1,5 +1,6 @@
 const { app, Tray, nativeImage, Menu } = require('electron');
 const { fetchMetadata } = require('./services/darwin/trackService');
+const { showNotification } = require('./services/notification');
 
 const intervalFetchMetadata = 2000;
 
@@ -18,7 +19,7 @@ app.on('ready', () => {
     // Call fetchMetadata at the specified interval
     setInterval(fetchMetadata, intervalFetchMetadata);
   } else {
-    console.log('bye, we will support for your os');
+    showNotification('OS Not Supported', 'we will support for your os', false);
     app.exit(0);
   }
 });
