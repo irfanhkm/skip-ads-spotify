@@ -3,18 +3,21 @@
 skip ads spotify by turn down the volume. respect the ads, author and singer
 
 ## Compability
-| OS  | API |
-| ------------- | -------------- |
-| Mac OS        | [Applescript](https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html)   |
-| Windows       | 👷🏻‍♂️ Soon         |
+| OS  | API | Platform |
+| ------------- | -------------- | -------------- |
+| Mac OS        | [Applescript](https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html)   | [electron.js](https://www.electronjs.org/) | 
+| Windows       | 👷🏻‍♂️ Soon         | [tauri](https://tauri.app/)
 | Linux         | 👷🏻‍♂️ Soon         |
 
 
-## Script
-- yarn start (dev)
-- yarn dist (build)
-
-#### Build with [electron.js](https://www.electronjs.org/)
+## Build
+- mac (electron):
+    - cd electron
+    - yarn start (dev)
+    - yarn dist (build)
+    - go to electron/dist install apps.
+- windows (tauri):
+    👷🏻‍♂️ Soon
 
 ### When ads
 <img width="362" alt="Screenshot 2023-06-25 at 19 33 47" src="https://github.com/irfanhkm/skip-ads-spotify/assets/30617181/224a3dca-c4b8-4edb-b583-b9a325ce8a02">
